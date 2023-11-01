@@ -27,16 +27,46 @@ window.onload = function init()
 	greenPlane.rotation.x = -Math.PI / 2;	// 평면을 수평으로 회전
 	scene.add(greenPlane);
 	
-	// greenPlane의 테두리 생성
-	const greenGeometry = new THREE.PlaneGeometry(202,82);
-	const greenPlaneEdges = new THREE.EdgesGeometry(greenGeometry);
-	const greenPlaneLine = new THREE.LineSegments(greenPlaneEdges, new THREE.LineBasicMaterial({
-		color: 0xE0E0E0, // 테두리의 색상을 초록색(0x00FF00)으로 변경
-		linewidth: 100,
-		scale:100,
-	}));
-	greenPlane.add(greenPlaneLine);
+	// greenPlane4의 테두리 생성
+	const line1Width = 4;
+	const rectangle1Width = 80;
+	const rectangle1Height = 1;
+	const borderGeometry1 = new THREE.BoxGeometry(rectangle1Width, rectangle1Height, line1Width);
+	const borderMaterial1 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle1 = new THREE.Mesh(borderGeometry1, borderMaterial1);
+	borderRectangle1.position.set(-60, 0 ,110);
+	borderRectangle1.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle1);
+	
+	const line11Width = 206;
+	const rectangle11Width = 4;
+	const rectangle11Height = 1;
+	const borderGeometry11= new THREE.BoxGeometry(rectangle11Width, rectangle11Height, line11Width);
+	const borderMaterial11 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle11 = new THREE.Mesh(borderGeometry11, borderMaterial11);
+	borderRectangle11.position.set(-161, 0 ,70);
+	borderRectangle11.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle11);
 
+	const line111Width = 4;
+	const rectangle111Width = 80;
+	const rectangle111Height = 1;
+	const borderGeometry111 = new THREE.BoxGeometry(rectangle111Width, rectangle111Height, line111Width);
+	const borderMaterial111 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle111 = new THREE.Mesh(borderGeometry111, borderMaterial111);
+	borderRectangle111.position.set(-262, 0 ,110);
+	borderRectangle111.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle111);
+
+	const line1111Width = 206;
+	const rectangle1111Width = 4;
+	const rectangle1111Height = 1;
+	const borderGeometry1111 = new THREE.BoxGeometry(rectangle1111Width, rectangle1111Height, line1111Width);
+	const borderMaterial1111 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle1111 = new THREE.Mesh(borderGeometry1111, borderMaterial1111);
+	borderRectangle1111.position.set(-161, 0 ,150);
+	borderRectangle1111.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle1111);
 
 	// 추가 초록색 배경 평면 생성 (greenPlane2)
 	const greenPlane2 = new THREE.Mesh(greenPlaneGeometry, greenPlaneMaterial);
@@ -44,15 +74,37 @@ window.onload = function init()
 	greenPlane2.rotation.x = -Math.PI / 2;
 	scene.add(greenPlane2);
 
-	// greenPlane2의 테두리 생성
-	const green2Geometry = new THREE.PlaneGeometry(202,142);
-	const greenPlane2Edges = new THREE.EdgesGeometry(green2Geometry);
-	const greenPlane2Line = new THREE.LineSegments(greenPlane2Edges, new THREE.LineBasicMaterial({
-		color: 0xE0E0E0, // 테두리의 색상을 초록색(0x00FF00)으로 변경
-		linewidth: 100,
-		scale:100,
-	}));
-	greenPlane2.add(greenPlane2Line);
+	const line2Width = 4;
+	const rectangle2Width = 139;
+	const rectangle2Height = 1;
+	const borderGeometry2 = new THREE.BoxGeometry(rectangle2Width, rectangle2Height, line2Width);
+	const borderMaterial2 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle2 = new THREE.Mesh(borderGeometry2, borderMaterial2);
+	borderRectangle2.position.set(-60, 0 ,-110);
+	borderRectangle2.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle2);
+	
+
+	const line222Width = 4;
+	const rectangle222Width = 142;
+	const rectangle222Height = 1;
+	const borderGeometry222 = new THREE.BoxGeometry(rectangle222Width, rectangle222Height, line222Width);
+	const borderMaterial222 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle222 = new THREE.Mesh(borderGeometry222, borderMaterial222);
+	borderRectangle222.position.set(-262, 0 ,-111);
+	borderRectangle222.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle222);
+
+	const line2222Width = 203;
+	const rectangle2222Width = 4;
+	const rectangle2222Height = 1;
+	const borderGeometry2222 = new THREE.BoxGeometry(rectangle2222Width, rectangle2222Height, line2222Width);
+	const borderMaterial2222 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle2222 = new THREE.Mesh(borderGeometry2222, borderMaterial2222);
+	borderRectangle2222.position.set(-160, 0 ,-181);
+	borderRectangle2222.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle2222);
+
 
 	// 추가 초록색 배경 평면 생성 (greenPlane3)
 	const greenPlane3 = new THREE.Mesh(greenPlaneGeometry, greenPlaneMaterial);
@@ -61,15 +113,45 @@ window.onload = function init()
 	scene.add(greenPlane3);
 
 	// greenPlane3의 테두리 생성
-	const greenPlane3Geometry = new THREE.PlaneGeometry(202,142);
-	const greenPlane3Edges = new THREE.EdgesGeometry(greenPlane3Geometry);
-	const greenPlane3Line = new THREE.LineSegments(greenPlane3Edges, new THREE.LineDashedMaterial({
-		color: 0xE0E0E0, // 테두리의 색상을 파란색(0x0000FF)으로 변경
-		linewidth:10,
-		dashSize: 100,
-		gapSize: 1,
-	}));
-	greenPlane3.add(greenPlane3Line);
+	const line3Width = 4;
+	const rectangle3Width = 145;
+	const rectangle3Height = 1;
+	const borderGeometry3 = new THREE.BoxGeometry(rectangle3Width, rectangle3Height, line3Width);
+	const borderMaterial3 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle3 = new THREE.Mesh(borderGeometry3, borderMaterial3);
+	borderRectangle3.position.set(261, 0 ,-110);
+	borderRectangle3.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle3);
+	
+	const line33Width = 190;
+	const rectangle33Width = 4;
+	const rectangle33Height = 1;
+	const borderGeometry33= new THREE.BoxGeometry(rectangle33Width, rectangle33Height, line33Width);
+	const borderMaterial33 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle33 = new THREE.Mesh(borderGeometry33, borderMaterial33);
+	borderRectangle33.position.set(167, 0 ,-39);
+	borderRectangle33.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle33);
+
+	const line333Width = 4;
+	const rectangle333Width = 143;
+	const rectangle333Height = 1;
+	const borderGeometry333 = new THREE.BoxGeometry(rectangle333Width, rectangle333Height, line333Width);
+	const borderMaterial333 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle333 = new THREE.Mesh(borderGeometry333, borderMaterial333);
+	borderRectangle333.position.set(60, 0 ,-110);
+	borderRectangle333.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle333);
+
+	const line3333Width = 202;
+	const rectangle3333Width = 4;
+	const rectangle3333Height = 1;
+	const borderGeometry3333 = new THREE.BoxGeometry(rectangle3333Width, rectangle3333Height, line3333Width);
+	const borderMaterial3333 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle3333 = new THREE.Mesh(borderGeometry3333, borderMaterial3333);
+	borderRectangle3333.position.set(160, 0 ,-181);
+	borderRectangle3333.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle3333);
 
 	const greenPlane4 = new THREE.Mesh(greenPlane2Geometry, greenPlaneMaterial);
 	greenPlane4.position.set(160, 0, 110); // 오른쪽 아래 사각형
@@ -77,15 +159,45 @@ window.onload = function init()
 	scene.add(greenPlane4);
 
 	// greenPlane4의 테두리 생성
-	const greenPlane4Geometry = new THREE.PlaneGeometry(202,82);
-	const greenPlane4Edges = new THREE.EdgesGeometry(greenPlane4Geometry);
-	const greenPlane4Line = new THREE.LineSegments(greenPlane4Edges, new THREE.LineDashedMaterial({
-		color: 0xE0E0E0, // 테두리의 색상을 파란색(0x0000FF)으로 변경
-		linewidth:10,
-		dashSize: 100,
-		gapSize: 1,
-	}));
-	greenPlane4.add(greenPlane4Line);
+	const line4Width = 4;
+	const rectangle4Width = 80;
+	const rectangle4Height = 1;
+	const borderGeometry4 = new THREE.BoxGeometry(rectangle4Width, rectangle4Height, line4Width);
+	const borderMaterial4 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle4 = new THREE.Mesh(borderGeometry4, borderMaterial4);
+	borderRectangle4.position.set(262, 0 ,110);
+	borderRectangle4.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle4);
+	
+	const line44Width = 206;
+	const rectangle44Width = 4;
+	const rectangle44Height = 1;
+	const borderGeometry44= new THREE.BoxGeometry(rectangle44Width, rectangle44Height, line44Width);
+	const borderMaterial44 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle44 = new THREE.Mesh(borderGeometry44, borderMaterial44);
+	borderRectangle44.position.set(161, 0 ,70);
+	borderRectangle44.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle44);
+
+	const line444Width = 4;
+	const rectangle444Width = 80;
+	const rectangle444Height = 1;
+	const borderGeometry444 = new THREE.BoxGeometry(rectangle444Width, rectangle444Height, line444Width);
+	const borderMaterial444 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle444 = new THREE.Mesh(borderGeometry444, borderMaterial444);
+	borderRectangle444.position.set(60, 0 ,110);
+	borderRectangle444.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle444);
+
+	const line4444Width = 206;
+	const rectangle4444Width = 4;
+	const rectangle4444Height = 1;
+	const borderGeometry4444 = new THREE.BoxGeometry(rectangle4444Width, rectangle4444Height, line4444Width);
+	const borderMaterial4444 = new THREE.MeshBasicMaterial({ color: 0xffffff }); // 노란색
+	const borderRectangle4444 = new THREE.Mesh(borderGeometry4444, borderMaterial4444);
+	borderRectangle4444.position.set(161, 0 ,150);
+	borderRectangle4444.rotation.y = -Math.PI / 2;
+	scene.add(borderRectangle4444);
 
 	// 추가 직각주차 배경 평면 생성 (greenPlane2)
 	const parkPlane1 = new THREE.Mesh(parkPlaneGeometry, parkPlaneMaterial);
