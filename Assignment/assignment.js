@@ -467,6 +467,19 @@ window.onload = function init()
 		console.error(error);
 	});
 
+	//신호등
+	const loader2 = new THREE.GLTFLoader();
+	loader2.load('./model/scene2.gltf', function(gltf){
+	car2 = gltf.scene.children[0];
+	car2.scale.set(1.5,1.5,1.5);
+	car2.position.set(-70,0,-50);
+	scene.add(gltf.scene);
+	animate();
+	}, undefined, function (error) {
+		console.error(error);
+	});
+
+
 	function animate() {
 		// 모델을 X축 주위로 회전
 		if (car) {
